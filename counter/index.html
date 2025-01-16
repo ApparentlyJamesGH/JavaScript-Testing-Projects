@@ -1,0 +1,61 @@
+<head>
+    <title>Integer Counter Web App</title>
+    <h1>This is an integer counter web app</h1>
+    <h2>This will increase and decrease a number by a given increment.</h2>
+</head>
+<body>
+    <h1 id="cntr" class="counter">Counter: 0</h1>
+    <div class="buttons">
+        <button class="add" onclick="add()">Increase Number</input>
+        <button class="sub" onclick="sub()">Decrease Number</input>
+    </div>
+</body>
+
+<script>
+    let number = 0;
+    function add() {
+        number = number + 1;
+        document.getElementById("cntr").innerText = "Counter: " + number
+    };
+
+    function sub() {
+        number = number - 1;
+        document.getElementById("cntr").innerText = "Counter: " + number
+    };
+</script>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        position: relative;
+        text-align: center;
+        color: rgba(0, 0, 0, .5);
+        top: -20px;
+    }
+
+    button {
+        height: 50px;
+        width: 150px;
+        font-size: 16px;
+        text-align: center;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    button.add {
+        color: green;
+    }
+
+    button.sub {
+        color: red
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
