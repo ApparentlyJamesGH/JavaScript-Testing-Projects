@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Commission Fee Caluclator</title>
+    <h1>Commission Fee Caluclator</h1>
+    <h2>This tool helps calculate the fee to charge for commissions</h2>
+</head>
+<body>
+    <a>Base Rate ($5 - $10, Covers basic effort and startup costs):
+        <input id="base" type="number"></input>
+    </a>
+    <a>Hourly Rate ($5 - $30):
+        <input id="hourly" type="number"></input>
+    </a>
+    <a>Estimated Hours (How long you expect the project to take):
+        <input id="hours" type="number"></input>
+    </a>
+    <a>Complexity Multiplier (1.0 - 2.5):
+        <input id="complex" type="number"></input>
+    </a>
+    <a>Busy Schedule (+10%):
+        <input id="busy" type="checkbox"></input>
+    </a>
+    <a>On Break (+15%):
+        <input id="break" type="checkbox"></input>
+    </a>
+    <a>Rush Order (+18%):
+        <input id="rush" type="checkbox"></input>
+    </a>
+    <a>Discount (%):
+        <input id="discount" type="number"></input>
+    </a>
+    <div class="buttons">
+        <button class="add" onclick="calc()">Calculate</button>
+        <button class="remove" onclick="calcr()">Calculate (convert to Robux)</button>
+    </div>
+    <h1 id="cntr" class="counter">Total fee: $0</h1>
+    <script src="script.js"></script>
+</body>
