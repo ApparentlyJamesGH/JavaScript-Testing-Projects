@@ -13,6 +13,11 @@ button.onclick = async function() {
             newTask.innerHTML = rawTemplate
 
             container.appendChild(newTask)
+
+            const close = newTask.querySelector("button")
+            close.onclick = () => {
+                newTask.remove()
+            }
         } else {
             alert("An unknown error occurred.")
         }
