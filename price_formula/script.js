@@ -18,7 +18,7 @@ async function calc(only) {
     total = total * (100 - Number(discount.value))/100
 
     if (only) { return total }
-    counter.innerText = `Total fee: $${total}`
+    counter.innerText = `Total fee: $${total} (€${total * .95})`
 }
 
 async function calcr() {
@@ -30,5 +30,5 @@ async function calcr() {
     total = total * (100 - Number(discount.value))/100
     total = total / .0035
 
-    counter.innerText = `Total fee: R$${total}`
+    counter.innerText = `Total fee: R$${math.ceil(total)}`
 }
